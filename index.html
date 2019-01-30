@@ -23,36 +23,59 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link1</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Some text</a>
-                            <a class="dropdown-item" href="#">Some text</a>
-                            <a class="dropdown-item" href="#">Some text</a>
-                        </div>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link waves-effect waves-light">Etusivu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link waves-effect waves-light">Yritysesittely</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link waves-effect waves-light">Henkilöstö</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link2</a>
+                        <a href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lomakkeet</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Some text</a>
-                            <a class="dropdown-item" href="#">Some text</a>
-                            <a class="dropdown-item" href="#">Some text</a>
+                            <a class="dropdown-item" href="#">Vikailmoitus</a>
+                            <a class="dropdown-item" href="#">Muuttoilmoitus</a>
+                            <a class="dropdown-item" href="#">Mittarilukemat</a>
+                            <a class="dropdown-item" href="#">Asiakirjatilaus</a>
+                            <a class="dropdown-item" href="#">Palaute</a>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link waves-effect waves-light">Alueen asiaa</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link3</a>
+                        <a href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Asuminen</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Some text</a>
-                            <a class="dropdown-item" href="#">Some text</a>
-                            <a class="dropdown-item" href="#">Some text</a>
+                            <a class="dropdown-item" href="#">Digi-asiaa</a>
+                            <a class="dropdown-item" href="#">Ilmanvaihto</a>
+                            <a class="dropdown-item" href="#">Lämmitys</a>
+                            <a class="dropdown-item" href="#">Palovaroitin</a>
+                            <a class="dropdown-item" href="#">Vakuutukset</a>
+                            <a class="dropdown-item" href="#">Ohjeita muuttajalle</a>
                         </div>
                     </li>
-                    <form class="form-inline ml-5">
-                        <input class="form-control mr-3" type="text" id="inputLogin" placeholder="login">
-                        <input class="form-control" type="password" id="inputPass" placeholder="password">
+                    <form class="form-inline ml-3">
+                        <div class="input-group ml-3" id="inputLogin">
+                            <div class="input-group-prepend" id="spanIcon">
+                                <span class="input-group-text"><i class="fas fa-user prefix"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="inputLogin" placeholder="Username">
+                        </div>
+                        <div class="input-group ml-3" id="inputPass">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-lock prefix"></i></span>
+                            </div>
+                            <input class="form-control" type="password" placeholder="Password">
+                        </div>
                         <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" id="btnSign" type="submit">Sign in</button>
-                        <a href="#" class="ml-3">Forgot passwod?</a>
+                        <a href="#" class="ml-3" id="linkForgotPass">Forgot passwod?</a>
                     </form>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <!-- <img src="img/building.jpg" alt="" style="width: 10%; height: 5%;" id="navbarImg"> -->
+                    <i class="fas fa-tools fa-2x" id="navbarIcon"></i>
                 </ul>
             </div>
         </nav>
@@ -88,45 +111,45 @@
 
     </main>
 
-<footer class="page-footer font-small cyan darken-3">
+    <footer class="page-footer font-small cyan darken-3">
 
-    <div class="container">
+        <div class="container">
 
-      <div class="row">
+            <div class="row">
 
-        <div class="col-md-12 py-5">
-          <div class="mb-5 flex-center">
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
 
-            <a class="fb-ic">
-              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <a class="tw-ic">
-              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <a class="gplus-ic">
-              <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <a class="li-ic">
-              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <a class="ins-ic">
-              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <a class="pin-ic">
-              <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-            </a>
-          </div>
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="pin-ic">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
-      </div>
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="">Powered by Taloyhtio.Info</a>
+        </div>
 
-    </div>
-
-    <div class="footer-copyright text-center py-3">© 2019 Copyright:
-      <a href="">Powered by Taloyhtio.Info</a>
-    </div>
-
-  </footer>
+    </footer>
 
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/popper.min.js"></script>

@@ -53,3 +53,10 @@ a:hover {
 #navbarIcon {
 	color: yellow;
 }
+p {
+	font-weight: bolder;
+}
+#menu:not(:hover) .current,
+#menu a:hover:not(#linkForgotPass) {            
+  color: #FFBB3F;
+}

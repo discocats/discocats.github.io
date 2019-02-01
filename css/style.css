@@ -13,6 +13,7 @@ header,
 }
 a {
 	font-weight: bolder;
+	color: #0066CC;
 }
 a:hover {
 	color: red;
@@ -71,4 +72,13 @@ p {
 }
 ol.breadcrumb li a {
 	text-decoration: underline;
+}
+tbody tr td {
+	font-weight: bolder;
+}
+ul.list-group li a {
+	text-decoration: underline;
+}
+ul.list-group {
+	width: 50%;
 }

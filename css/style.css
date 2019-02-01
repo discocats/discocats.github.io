@@ -53,10 +53,22 @@ a:hover {
 #navbarIcon {
 	color: yellow;
 }
+#iconBrand:hover {
+	color:unset;
+}
+#iconBrand:hover {
+	color: lightgreen;
+}
 p {
 	font-weight: bolder;
 }
 #menu:not(:hover) .current,
 #menu a:hover:not(#linkForgotPass) {            
   color: #FFBB3F;
+}
+#linkForgotPass {
+	text-decoration: underline;
+}
+ol.breadcrumb li a {
+	text-decoration: underline;
 }

@@ -5,10 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Haritun Huolto Oy</title>
+    <title>Yritysesittely | Haritun Huolto Oy</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -17,7 +19,7 @@
     <header>
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark black" id="menu">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-landmark"></i></a>
+            <a class="navbar-brand" href="index.html"><i class="fas fa-landmark" id="iconBrand"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -74,7 +76,6 @@
                     </form>
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    <!-- <img src="img/building.jpg" alt="" style="width: 10%; height: 5%;" id="navbarImg"> -->
                     <i class="fas fa-tools fa-2x" id="navbarIcon"></i>
                 </ul>
             </div>
@@ -96,6 +97,48 @@
         </div>
 
     </header>
+
+    <main>
+        <div class="container my-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb default-color mb-5">
+                    <li class="breadcrumb-item"><a class="white-text" href="index.html">Haritun Huolto Oy</a></li>
+                    <li class="breadcrumb-item active black-text font-weight-bolder">Yritysesittely</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3><p class="mb-4">Yritysesittely</p></h3>
+                    <p class="font-weight-bold mb-4">Huoltoyhtiön henkilöstö</p>
+                    <p class="mb-4">Huoltoyhtiön palveluksessa on 20 henkilöä. Toimitusjohtaja Timo Larko hoitaa yhtiön johdon lisäksi myös isännöintiä. Muut isännöitsijät ovat Mauri Laine, AIT ja Joni Salmi, AIT. Taloyhtiöitten kirjanpidon ja vastikevalvonnan hoitaa Noora Pitkänen. Asiakaspalvelussa toimii Leena Linjos. Kiinteistötyönjohtajana on Jukka Jalamo alaisenaan 7 huoltomiestä, 6 siivoojaa ja puutarhuri (äitiyslomalla).</p>
+                    <p class="font-weight-bold mb-4">Huoltoyhtiön perustaminen, tehtävät ja hallitus</p>
+                </div>
+                <div class="col-md-6">
+                    <!-- <img src="img/mainPicture.jpg" alt="" width="90%" height="80%" class="img-fluid z-depth-3"> -->
+                    <a href="https://c1.staticflickr.com/1/357/31876784275_12286240d4_h.jpg" data-fancybox="mainPicture" class="ml-5">
+                        <img src="https://c1.staticflickr.com/1/357/31876784275_fbc9696913_m.jpg" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="mb-4">Haritun Huolto Oy:n perustivat 9.7.1981 alueen alkuperäiset rakentajayhtiöt eli Rakennusosakeyhtiö Hartela, Rakennustoimisto R. Järvinen Oy, Kivikartio Oy, Rakennustoimisto A. Puolimatka Oy, Rakennus-Ruola Oy, Turun Sato Oy ja Turun Asuntotuotanto Oy.</p>
+                    <p class="mb-4">Huoltoyhtiön tehtäviksi on määritelty alueelle rakennettavien yhtiöiden isännöiminen, niiden huollon, siivouksen ja jätehuollon järjestäminen.</p>
+                    <p class="mb-4">Huoltoyhtiön omistus rakentuu alueella olevista asunto- ja kiinteistöyhtiöistä eli alueen yhtiöt omistavat kaikki Haritun Huolto Oy:n osakkeet yhtiöitten asm2- suhteessa.</p>
+                    <p class="mb-4">Huoltoyhtiön toiminta kustannetaan alueen yhtiöiltä perittävällä huoltomaksulla. Se määräytyy huoltoyhtiön budjetin mukaan siten, että huoltoyhtiö toimii omakustannusperiaatteella eli ilman voittoa.</p>
+                    <p class="mb-4">Vuoden 1992 syysyhtiökokous valitsi huoltoyhtiölle ensimmäisen Haritun Huolto Oy:n osakasyhtiöitten edustajista valitun hallituksen. Haritun Huolto Oy:n hallinnosta vastaa kalenterivuodeksi kerrallaan valittava hallitus. Tällä hetkellä hallituksessa on 8 jäsentä, joilla jokaisella on henkilökohtainen varamies.</p>
+                    <p class="font-weight-bold mb-4">Koivula- Haritun asuinalue</p>
+                    <p class="mb-4">Koivula- Harittu on nuori, nopeasti kasvanut asuinalue. Nykyisin asukkaita on kaikkiaan runsas 4600 ja väestössä painottuu selkeästi nuorten ikäluokkien osuus. Alue on lapsiperheiden suosiossa luonnonläheisyytensä ja rauhallisuutensa ansiosta. Ydinkeskustaan matkaa on vain viitisen kilometriä.</p>
+                    <p class="mb-4">Koivula- Haritun rakentaminen alkoi v. 1983, jolloin valmistui ensimmäinen asuntoyhtiö eli As. Oy Sydänsimpukka. Nykyisin Haritun Huolto Oy:n toimialueeseen kuuluu 75 yhtiötä, joissa on yhteensä noin 4600 asukasta.</p>
+                    <p class="mb-4">Viljavana rannikkomaana alueelta on kirjattu kyläasutuksesta jo 1200- luvulta. Uudelta ajalta tunnetuimpia perimätietoja ovat kuninkaallisten seurueiden ja Turun Akatemian opiskelijoiden huviretket alueelle. Myöhemmin Koivula ja Harittu luettiin osaksi Kaarinan pitäjää, josta ne liitettiin Turun kaupunkiin v. 1939. Maisemassa säilyivät kuitenkin pitkään metsät ja peltosarat ja rakennuskanta käsitti lähinnä omakotitaloja. Sitten 1970- luvun kaavoitussuunnitelmat mahdollistivat tiiviimmän kaupunkilähiön rakentamisen seuraavan vuosikymmenen alusta lähtien.</p>
+                    <p class="mb-4">Tällä hetkellä Koivula ja Harittu alkavat olla rakennuskannaltaan valmiita. Asumiseen kaavoitettuja, mutta vielä rakentamattomia kohtia on alueella enää muutamia. Koivulan keskukseen on kaavoitettu ns. yleistä rakennustilaa, eli tiloja julkisille palveluille, joiden rakennustahti kuitenkin riippuu julkisen talouden resursseista.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
 
     <footer class="page-footer font-small cyan darken-3">
 
@@ -141,6 +184,8 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/mdb.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 

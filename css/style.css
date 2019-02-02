@@ -27,6 +27,12 @@ a:hover {
 	margin-bottom: 10px;
 	}
 }
+@media (min-width: 992px) {
+	#formError {
+		width: 50%;
+		margin: 0 auto;
+	}
+}
 @media (max-width: 575px) {
 	#inputLogin {
 		margin-bottom: 10px;
@@ -81,4 +87,7 @@ ul.list-group li a {
 }
 ul.list-group {
 	width: 50%;
+}
+#starIcon {
+	color: red;
 }

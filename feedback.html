@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Palaute | Haritun Huolto Oy</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark black" id="menu">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-landmark" id="iconBrand"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link waves-effect waves-light">Etusivu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="company.html" class="nav-link waves-effect waves-light">Yritysesittely</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="staff.html" class="nav-link waves-effect waves-light">Henkilöstö</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="form.html" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Lomakkeet</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="errorMes.html">Vikailmoitus</a>
+                            <a class="dropdown-item" href="addressNot.html">Muuttoilmoitus</a>
+                            <a class="dropdown-item" href="meterRead.html">Mittarilukemat</a>
+                            <a class="dropdown-item" href="docOrder.html">Asiakirjatilaus</a>
+                            <a class="dropdown-item" href="feedback.html">Palaute</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link waves-effect waves-light">Alueen asiaa</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Asuminen</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Digi-asiaa</a>
+                            <a class="dropdown-item" href="#">Ilmanvaihto</a>
+                            <a class="dropdown-item" href="#">Lämmitys</a>
+                            <a class="dropdown-item" href="#">Palovaroitin</a>
+                            <a class="dropdown-item" href="#">Vakuutukset</a>
+                            <a class="dropdown-item" href="#">Ohjeita muuttajalle</a>
+                        </div>
+                    </li>
+                    <form class="form-inline ml-3">
+                        <div class="input-group ml-3" id="inputLogin">
+                            <div class="input-group-prepend" id="spanIcon">
+                                <span class="input-group-text"><i class="fas fa-user prefix"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="inputLogin" placeholder="Username">
+                        </div>
+                        <div class="input-group ml-3" id="inputPass">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-lock prefix"></i></span>
+                            </div>
+                            <input class="form-control" type="password" placeholder="Password">
+                        </div>
+                        <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" id="btnSign" type="submit">Sign in</button>
+                        <a href="#" class="ml-3" id="linkForgotPass">Forgot passwod?</a>
+                    </form>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <i class="fas fa-tools fa-2x" id="navbarIcon"></i>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="view intro-2">
+            <div class="full-bg-img">
+                <div class="mask rgba-black-light flex-center">
+                    <div class="container text-center white-text">
+                        <div class="white-text text-center wow fadeInUp">
+                            <h2>This Navbar is fixed</h2>
+                            <h5>It will always stay visible on the top, even when you scroll down</h5>
+                            <br>
+                            <p>Full page intro with background image will be always displayed in full screen mode, regardless of device </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container my-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb default-color mb-5">
+                    <li class="breadcrumb-item"><a class="white-text" href="index.html">Haritun Huolto Oy</a></li>
+                    <li class="breadcrumb-item"><a class="white-text" href="form.html">Lomakkeet</a></li>
+                    <li class="breadcrumb-item active black-text font-weight-bolder">Palaute</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3><p class="mb-4">Palaute</p></h3>
+                    <p class="mb-4">Lähetä palautetta sivuista, ideoita, toiveita, risuja, ruusuja tai terveisiä sivujen ylläpitäjälle!</p>
+                    <p class="mb-4">Jos haluat vastauksen jätä myös sähköpostiosoitteesi!</p>
+                    <p><i class="fas fa-star" id="starIcon"></i> merkityt pakollisia.</p>
+                    <form class="border border-light p-5" id="formError">
+
+                        <p>Nimi: <i class="fas fa-star" id="starIcon"></i></p>
+                        <input type="text" id="" class="form-control mb-4">
+                        <p>Yritys:</p>
+                        <input type="text" id="" class="form-control mb-4">
+                        <p>Puhelinnumero:</p>
+                        <input type="text" id="" class="form-control mb-4">
+                        <p>Sähköposti:</p>
+                        <input type="text" id="" class="form-control mb-4">
+                        <p>Viesti:</p>
+                        <div class="form-group mb-4">
+                            <textarea class="form-control rounded-0" rows="4"></textarea>
+                        </div>
+                        <img src="img/captcha.jpg" width="20%" height="25%" class="mb-4" />
+                        <br>
+                        <p>CAPTCHA Code: <i class="fas fa-star" id="starIcon"></i></p>
+                        <input type="text" name="captcha" class="mb-4" />
+                        <br>
+                        <button class="btn btn-info ml-0" type="submit" id="btnSend">Send</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="page-footer font-small cyan darken-3">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                        </a>
+                        <a class="pin-ic">
+                            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="">Powered by Taloyhtio.Info</a>
+        </div>
+
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -20,3 +20,13 @@ $('[data-fancybox="mainPicture"]').fancybox({
     'close'
   ]
 });
+
+/*$(function(){
+  
+  $("li.nav-item.dropdown div.dropdown-menu a.dropdown-item").click(function(){
+    
+    $("a.nav-link.dropdown-toggle:first-child").text($(this).text());
+     $("a.nav-link.dropdown-toggle:first-child").val($(this).text());
+  });
+
+});*/

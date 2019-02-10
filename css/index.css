@@ -1,0 +1,7 @@
+section {
+    display: flex;
+}
+
+section article {
+    flex: 1 1 0;
+}

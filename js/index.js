@@ -1,7 +1,7 @@
 const sweets = [
-    { name: "Tetes Brulees Blue Raspberry Color", description: "Кислая малина" },
-    { name: "Top Pops Red and Blue Raspberry", description: "Вкусные ретро жевательные ириски" },
-    { name: "Top Pops Watermelon", description: "Вкусные ретро жевательные ириски"}
+    { name: "Tetes Brulees Blue Raspberry Color", description: "Кислая малина", price: 42 },
+    { name: "Top Pops Red and Blue Raspberry", description: "Вкусные ретро жевательные ириски", price: 54 },
+    { name: "Top Pops Watermelon", description: "Вкусные ретро жевательные ириски", price: 33}
 ];
 
 function fromSweetToArticle(data) {

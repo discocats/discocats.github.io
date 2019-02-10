@@ -5,9 +5,11 @@ const sweets = [
 ];
 
 function fromSweetToArticle(data) {
+	const finalPrice = `<strong>${data.price}</strong> rub`;
     return "<article>"
     + `<h1>${data.name}</h1>`
     + `<p>${data.description}</p>`
+    + `<p>${finalPrice}</p>`
     + "</article>";
 }
 

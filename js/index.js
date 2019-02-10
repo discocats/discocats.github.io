@@ -6,7 +6,7 @@ const sweets = [
 
 function fromSweetToArticle(data) {
 	const finalPrice = `<strong>${data.price}</strong> rub`;
-    return "<article>"
+    return "<article class='col-12 col-md-4'>"
     + `<img src=${data.imageUrl}>`
     + `<h1>${data.name}</h1>`
     + `<p>${data.description}</p>`

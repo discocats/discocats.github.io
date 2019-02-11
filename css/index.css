@@ -1,7 +1,9 @@
-section {
-    display: flex;
+img {
+	background-color: white;
 }
-
-section article {
-    flex: 1 1 0;
+section {
+	text-align: center;
+}
+body {
+	background-color: #ffcccc;
 }

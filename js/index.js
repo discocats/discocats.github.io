@@ -5,12 +5,11 @@ const sweets = [
 ];
 
 function fromSweetToArticle(data) {
-	const finalPrice = `<strong>${data.price}</strong>`;
     return "<article class='col-12 col-md-4'>"
     + `<img src=${data.imageUrl} class='rounded-circle' alt='Фотография товара'/>`
     + `<h4>${data.name}</h4>`
     + `<p>${data.description}</p>`
-    + `<p>${finalPrice} &#8381;</p>`
+    + `<p id="price">${data.price} &#8381;</p>`
     + "</article>";
 }
 

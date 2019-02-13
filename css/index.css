@@ -114,3 +114,7 @@ footer {
 #number {
 	width: 10%;
 }
+#clicks {
+	font-weight: bolder;
+	font-size: 15px;
+}

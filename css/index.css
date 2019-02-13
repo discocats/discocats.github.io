@@ -106,7 +106,11 @@ footer {
 #linkFooter:hover {
 	color: #33ff99;
 }
-.fas.fa-cart-plus {
+#addCart {
+	cursor: pointer;
 	font-size: 30px;
 	color: brown;
+}
+#number {
+	width: 10%;
 }

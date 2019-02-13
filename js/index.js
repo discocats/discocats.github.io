@@ -9,7 +9,7 @@ function fromSweetToArticle(data) {
     + `<img src=${data.imageUrl} class='rounded-circle' alt='Фотография товара'/>`
     + `<h4>${data.name}</h4>`
     + `<p>${data.description}</p>`
-    + `<p id="price">${data.price} &#8381;</p>` + '<a href="#"> <i class="fas fa-cart-plus"></i> </a>'
+    + `<p id="price">${data.price} &#8381;</p>` + '<p id="addCart" onclick="addProductToCart()"> <i class="fas fa-cart-plus"></i> </p>'
     + "</article>";
 }
 
@@ -20,3 +20,10 @@ for (let i = 0; i < sweets.length; i++) {
 
 const catalog = document.getElementsByClassName("catalog")[0];
 catalog.innerHTML = finalHtml;
+
+function addProductToCart() {
+	var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('number').value = value;
+}

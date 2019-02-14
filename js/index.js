@@ -21,11 +21,9 @@ for (let i = 0; i < sweets.length; i++) {
 const catalog = document.getElementsByClassName("catalog")[0];
 catalog.innerHTML = finalHtml;
 
+let clicks = 0;
 function addProductToCart() {
-	var value = parseInt(document.getElementById('number').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('number').value = value;
+    document.getElementById("clicks").innerHTML = ++clicks;
 }
 
 

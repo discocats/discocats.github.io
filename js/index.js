@@ -21,10 +21,9 @@ for (let i = 0; i < sweets.length; i++) {
 const catalog = document.getElementsByClassName("catalog")[0];
 catalog.innerHTML = finalHtml;
 
-var clicks = 0;
+let clicks = 0;
 function addProductToCart() {
-	clicks += 1;
-    document.getElementById("clicks").innerHTML = clicks;
+    document.getElementById("clicks").innerHTML = ++clicks;
 }
 
 

@@ -17,41 +17,79 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light mb-3">
-            <a class="navbar-brand" href="index.html"><i class="fas fa-candy-cane"></i></a>
-            <strong class="mr-3">Sweet Shop</strong>
+            <strong>amazon</strong>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav">
                     <form class="form-inline ml-3">
-                        <div class="input-group ml-3" id="inputLogin">
-                            <div class="input-group-prepend" id="spanIcon">
-                                <span class="input-group-text"><i class="fas fa-user prefix"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Username">
-                        </div>
-                        <div class="input-group ml-3" id="inputPass">
+                        <div class="input-group ml-3" id="blockInput">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-lock prefix"></i></span>
+                                <div class="dropdown">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownBtn">
+                                        All
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">All Departments</a>
+                                        <a class="dropdown-item" href="#">Arts & Crafts</a>
+                                        <a class="dropdown-item" href="#">Automotive</a>
+                                    </div>
+                                </div>
                             </div>
-                            <input class="form-control" type="password" placeholder="Password">
-                        </div>
-                        <button class="btn btn-dark ml-3" id="btnSign" type="submit">Sign in</button>
-                        <a href="#" class="ml-3" id="linkForgotPass">Forgot password?</a>
-                        <div class="input-group ml-3">
-                            <input class="form-control" type="search" placeholder="search..." id="inputSearch">
+                            <input class="form-control" type="search" id="inputSearch">
                             <span class="input-group-append" id="spanSearch">
-                            <button class="btn btn-outline-secondary" type="button">
+                            <button class="btn" type="button" id="btnSearch">
                                 <i class="fa fa-search"></i>
                             </button>
                           </span>
                         </div>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Departments</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"><span class="glyphicons glyphicons-tea-kettle"></span>Prime video</a>
+                                <a class="dropdown-item" href="#">Music, CDs</a>
+                                <a class="dropdown-item" href="#">Digital Music</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link waves-effect waves-light mr-1" id="link">Your Amazon.com</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link waves-effect waves-light mr-1" id="link">Today's Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link waves-effect waves-light mr-1" id="link">Gift Cards</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link waves-effect waves-light mr-1" id="link">Registry</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link waves-effect waves-light mr-1" id="link">Sell</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link waves-effect waves-light mr-1" id="link">Help</a>
+                        </li>
                     </form>
                 </ul>
-                <ul class="navbar-nav ml-auto mr-5" id="shopCartUl">
-                    <i class="fas fa-shopping-cart ml-3 mr-2" id="cartIcon"></i>
+                <ul class="navbar-nav mt-5 ml-2">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account & Lists</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#"><span class="glyphicons glyphicons-tea-kettle"></span>Prime video</a>
+                        <a class="dropdown-item" href="#">Music, CDs</a>
+                        <a class="dropdown-item" href="#">Digital Music</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link waves-effect waves-light" id="orders">Orders</a>
+                </li>
+                <i class="fas fa-shopping-cart ml-2" id="cartIcon"></i>
+                </ul>
+                                    
                     <span id="clicks" class="mt-1 ml-1 text-white"></span>
+                <ul class="navbar-nav ml-auto" id="shopCartUl">
+                    <p id="titleRight">Shop Today's Deals</p>
                 </ul>
 
             </div>

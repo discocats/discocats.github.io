@@ -12,17 +12,11 @@ body {
 	font-size: 25px;
 }
 header {
-	background-image: linear-gradient(#48c6ef, #6f86d6);
-}
-ul li.nav-item a {
-	color: white;
-	font-size: 18px;
-	font-weight: bolder;
+	background-color: #232f3e;
 }
 strong {
-	font-style: italic;
-	font-size: 20px;
-	color: orange;
+	font-size: 25px;
+	color: white;
 }
 #linkForgotPass {
 	color: white;
@@ -37,8 +31,11 @@ strong {
 }
 #cartIcon {
 	font-size: 30px;
-	color: #6600cc;
+	color: white;
 }
+#blockInput {
+		width: 100%;
+	}
 @media (max-width: 1467px) and (min-width: 992px) {
 	#inputSearch {
 		margin-top: 10px;
@@ -89,6 +86,11 @@ strong {
 		margin-bottom: 10px;
 	}
 }
+@media (max-width: 1467px) {
+	#dropdownBtn {
+		margin-top: 10px;
+	}
+}
 footer {
     position: fixed;
     height: 100px;
@@ -118,3 +120,48 @@ footer {
 	font-weight: bolder;
 	font-size: 15px;
 }
+a.dropdown-item:hover {
+	background-color: #0080FF;
+	color: white;
+}
+#btnSearch {
+	background: #FFB266;
+}
+#btnSearch:hover {
+	background: #FF9933;
+}
+.form-control:hover {
+	border-color: orange;
+}
+#titleRight {
+	color: #C0C0C0;
+	font-size: 18px;
+}
+#navbarDropdown {
+	color: white;
+	font-weight: unset;
+	font-weight: bolder;
+	font-size: 15px;
+}
+.dropdown-menu > .dropdown-item {
+	color: black;
+	font-size: 15px;
+	font-weight: unset;
+}
+.dropdown-menu > .dropdown-item:hover {
+	color: #FF9933;
+	font-size: 15px;
+	font-weight: unset;
+	text-decoration: underline;
+	background-color: unset;
+}
+#link {
+	color: #C0C0C0;
+	font-size: 15px;
+}
+#orders {
+	color: white;
+	font-size: 15px;
+	font-weight: bolder;
+}
+

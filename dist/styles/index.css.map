@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "index.css",
+	"sources": [
+		"../../src/styles/index.scss",
+		"../../src/styles/feature.scss"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,GAAG,CAAC;EACA,OAAO,EAAE,KAAK,GACjB"
+}

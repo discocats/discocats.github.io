@@ -1,0 +1,26 @@
+{
+  "name": "discocats.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node src/build/sass.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discocats/discocats.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/discocats/discocats.github.io/issues"
+  },
+  "homepage": "https://github.com/discocats/discocats.github.io#readme",
+  "devDependencies": {
+    "colors": "^1.3.3",
+    "fs": "0.0.1-security",
+    "node-sass": "^4.11.0"
+  }
+}

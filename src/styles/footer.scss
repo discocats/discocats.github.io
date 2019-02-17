@@ -1,0 +1,17 @@
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(#667eea, #764ba2);
+}
+#copyright {
+	font-size: 17px;
+}
+#linkFooter {
+	font-size: 17px;
+	color: white;
+}
+#linkFooter:hover {
+	color: #33ff99;
+}

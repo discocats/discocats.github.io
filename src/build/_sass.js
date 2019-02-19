@@ -20,6 +20,12 @@ function compileSassAsync() {
         (err, result) => {
             if (err) {
                 console.log(err.red);
+                return;
+            }
+
+            if (!result || !result.css) {
+                console.log("result is empty".red);
+                return;
             }
 
             fs.writeFile(outFilePath, result.css, err => {

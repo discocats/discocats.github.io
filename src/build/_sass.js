@@ -1,6 +1,6 @@
 const sass = require("node-sass");
 const fs = require("fs");
-const colors = require("colors");
+require("colors");
 
 /*
     Путь идет от корня
@@ -38,4 +38,6 @@ function compileSassAsync() {
     );
 }
 
-compileSassAsync();
+module.exports = {
+    compileSassAsync,
+}

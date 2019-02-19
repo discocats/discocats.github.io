@@ -9,3 +9,9 @@
 # Build
 
 - Run `npm run build` in root directory
+
+# Development
+
+## Watch
+
+- Run `npm run watch` in root directory. When `localhost:3004` page should be open automatically.

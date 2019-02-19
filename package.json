@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node src/build/sass.js"
+    "build": "node src/build/scripts/styles.js",
+    "watch": "node src/build/scripts/watch.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/discocats/discocats.github.io#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "colors": "^1.3.3",
     "fs": "0.0.1-security",
     "node-sass": "^4.11.0"

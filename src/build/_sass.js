@@ -2,12 +2,7 @@ const sass = require("node-sass");
 const fs = require("fs");
 require("colors");
 
-/*
-    Путь идет от корня
-*/
-
-const outFilePath = "./dist/styles/index.css";
-const inFilePath = "./src/styles/index.scss";
+const {styles: {outFilePath, inFilePath}} = require("./_config");
 
 function compileSassAsync() {
     sass.render(

@@ -1,7 +1,12 @@
 const bsServer = require("browser-sync").create("My server");
 const bsProxy = require("browser-sync").create("My proxy server");
-const { compileSassAsync } = require("./_sass");
 require("colors");
+
+const { compileSassAsync } = require("./_sass");
+const {
+    styles: { outFilePath: stylesOutPath, allSrcFiles: allStylesSrcFiles },
+    html: { outFilePath: htmlOutPath }
+} = require("./_config");
 
 // reload 'localhost:3005' when dist css or html changes
 function startProxy() {
@@ -16,7 +21,7 @@ function startProxy() {
             proxy: "localhost:3005",
             port: 3004,
             injectChanges: true,
-            files: ["./dist/styles/index.css", "./index.html"]
+            files: [stylesOutPath, htmlOutPath]
         },
         () => console.log("Proxy server initiated.\n".green)
     );
@@ -24,7 +29,7 @@ function startProxy() {
 
 function runServerAndProxy() {
     // run compileSassAsync when sass changes
-    bsProxy.watch(["./src/styles/**/*.scss"]).on("change", compileSassAsync);
+    bsProxy.watch([allStylesSrcFiles]).on("change", compileSassAsync);
 
     bsServer.init(
         {

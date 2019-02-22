@@ -2,7 +2,7 @@ const sass = require("node-sass");
 const fs = require("fs");
 require("colors");
 
-const {sass: {outFilePath, inFilePath}} = require("./_config");
+const {styles: {outFilePath, inFilePath}} = require("./_config");
 
 function compileSassAsync() {
     sass.render(

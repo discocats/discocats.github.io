@@ -12,7 +12,12 @@ function lintStyles() {
             formatter: "compact"
         })
         .then(function(data) {
-            console.log(data.output.green);
+            if (data.output) {
+                console.log("linter found several issues".blue)
+                console.log(data.output.blue);
+            } else {
+                console.log("linter found no issues".green)
+            }
         })
         .catch(function(err) {
             // do things with err e.g.

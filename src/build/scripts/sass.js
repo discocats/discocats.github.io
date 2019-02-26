@@ -1,3 +1,3 @@
 const { compileSassAsync } = require("../_sass");
 
-compileSassAsync();
+compileSassAsync.then();

@@ -4,7 +4,13 @@ require("colors");
 
 const {styles: {outFilePath, inFilePath}} = require("./_config");
 
-function compileSassAsync() {
+function logErrorIfAny(err) {
+    if (err) {
+        console.log(err.red);
+    }
+}
+
+function compileSassAsync(resolve, reject) {
     sass.render(
         {
             file: inFilePath,
@@ -15,30 +21,24 @@ function compileSassAsync() {
         (error, result) => {
             if (error) {
                 console.log(error.formatted.red);
-                return;
+                reject();
             }
 
             if (!result || !result.css) {
                 console.log("result is empty".red);
-                return;
+                reject();
             }
 
-            fs.writeFile(outFilePath, result.css, err => {
-                if (err) {
-                    console.log(err.red);
-                }
-            });
-            fs.writeFile(outFilePath + ".map", result.map, err => {
-                if (err) {
-                    console.log(err.red);
-                }
-            });
+            fs.writeFile(outFilePath, result.css, logErrorIfAny);
+            fs.writeFile(outFilePath + ".map", result.map, logErrorIfAny);
 
             console.log("sass has been successfully built.".green);
+
+            resolve();
         }
     );
 }
 
 module.exports = {
-    compileSassAsync,
+    compileSassAsync: new Promise(compileSassAsync),
 }

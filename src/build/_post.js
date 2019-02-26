@@ -45,7 +45,7 @@ function performPostcssStep() {
         })
         .catch(error => {
             console.log("an error ocurred".red);
-            console.log(error.red);
+            console.log(JSON.stringify(error).red);
         });
 }
 

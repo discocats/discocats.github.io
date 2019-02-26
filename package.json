@@ -28,10 +28,5 @@
         "fs": "0.0.1-security",
         "node-sass": "^4.11.0",
         "postcss": "^7.0.14"
-    },
-    "browserslist": [
-        "last 2 versions",
-        "ie 8",
-        "ie 9"
-    ]
+    }
 }

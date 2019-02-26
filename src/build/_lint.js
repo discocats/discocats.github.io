@@ -1,6 +1,6 @@
 const stylelint = require("stylelint");
-require("colors");
 
+const log = require("./logging.js");
 const {
     styles: { allSrcFiles }
 } = require("./_config");
@@ -13,15 +13,14 @@ function lintStyles() {
         })
         .then(function(data) {
             if (data.output) {
-                console.log("linter found several issues".blue)
-                console.log(data.output.blue);
+                log.logInfo("linter found several issues");
+                log.logInfo(data.output);
             } else {
-                console.log("linter found no issues".green)
+                log.logSuccess("linter found no issues");
             }
         })
         .catch(function(err) {
-            // do things with err e.g.
-            console.error(err.stack.red);
+            log.logError(err);
         });
 }
 

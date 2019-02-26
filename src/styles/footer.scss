@@ -1,80 +1,95 @@
 footer {
-	p {
-		margin-bottom: 0;
-	}
+  p {
+    margin-bottom: 0;
+  }
 }
+
 #btnTopFooter {
-	width: 100%;
-	cursor: pointer;
-	color: white;
-	background-color: #32445F;
-	height: 50px;
-	text-align: center;
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  background-color: #32445f;
+  height: 50px;
+  text-align: center;
 }
+
 #btnTopFooter:hover {
-	width: 100%;
-	cursor: pointer;
-	color: white;
-	background-color: #445C80;	
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  background-color: #445c80;
 }
+
 #middleFooter {
-	background-color: #232F3E;
+  background-color: #232f3e;
 }
+
 #middleFooter h3 {
-	color: #FFF;
-	font-size: 16px;
-	font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
 }
+
 #middleFooter p {
-	color: #DDD;
-	font-size: 14px;
-	margin-bottom: 4px;
+  color: #ddd;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
+
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0; 
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
+
 #titleP {
-	text-align: center;
-	color: #E0E0E0;
-	font-weight: bold;
+  text-align: center;
+  color: #e0e0e0;
+  font-weight: bold;
 }
+
 .btn-group {
-	color: #E0E0E0;
+  color: #e0e0e0;
 }
+
 #middleFooterThree {
-	padding-bottom: 30px;
+  padding-bottom: 30px;
 }
+
 #bottomFooter {
-	background-color: #131A22;
-	padding-top: 30px;
+  background-color: #131a22;
+  padding-top: 30px;
 }
+
 #bottomFooter #difText {
-	color: #C0C0C0;
-	font-size: 10px;
-	margin-top: -20px;
+  color: #c0c0c0;
+  font-size: 10px;
+  margin-top: -20px;
 }
 
 #bottomFooter #mainText {
-	color: white;
-	font-size: 12px;
+  color: white;
+  font-size: 12px;
 }
+
 #lastBottomFooter {
-	padding-top: 25px;
-	padding-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
+
 #lastBottomFooter p {
-	color: #C0C0C0;
+  color: #c0c0c0;
 }
+
 #lastBottomFooter a {
-	color: white;
-	text-decoration: none;
-	cursor: pointer;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 #lastBottomFooter a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }

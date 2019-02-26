@@ -1,8 +1,9 @@
 const bsServer = require("browser-sync").create("My server");
 const bsProxy = require("browser-sync").create("My proxy server");
-require("colors");
 
-const { compileSassAsync } = require("./_sass");
+const log = require("./logging.js");
+
+const { compileSassAsyncFunc } = require("./_sass");
 const {
     styles: { outFilePath: stylesOutPath, allSrcFiles: allStylesSrcFiles },
     html: { outFilePath: htmlOutPath }
@@ -22,14 +23,13 @@ function startProxy() {
             port: 3004,
             injectChanges: true,
             files: [stylesOutPath, htmlOutPath]
-        },
-        () => console.log("Proxy server initiated.\n".green)
+        }, log.logSuccess("Proxy server initiated.")
     );
 }
 
 function runServerAndProxy() {
     // run compileSassAsync when sass changes
-    bsProxy.watch([allStylesSrcFiles]).on("change", compileSassAsync);
+    bsProxy.watch([allStylesSrcFiles]).on("change", compileSassAsyncFunc);
 
     bsServer.init(
         {
@@ -43,7 +43,7 @@ function runServerAndProxy() {
     );
 
     bsServer.emitter.on("init", () => {
-        console.log("Server initiated.\n".green);
+        log.logSuccess("Server initiated.");
         startProxy();
     });
 }

@@ -2,14 +2,8 @@ const postcss = require("postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const fs = require("fs");
-require("colors");
 
-function logErrorIfAny(err) {
-    if (err) {
-        console.log(err.red);
-    }
-}
-
+const log = require("./logging.js");
 const {
     styles: { outFilePath }
 } = require("./_config");
@@ -39,13 +33,13 @@ function performPostcssStep() {
     postcss([autoprefixer, configuredCssNano])
         .process(compiledSass, { from: outFilePath, to: outFilePath })
         .then(result => {
-            fs.writeFile(outFilePath, result.css, logErrorIfAny);
+            fs.writeFile(outFilePath, result.css, log.logError);
 
-            console.log("postcss finished".green);
+            log.logSuccess("postcss finished");
         })
         .catch(error => {
-            console.log("an error ocurred".red);
-            console.log(JSON.stringify(error).red);
+            log.logError("an error ocurred");
+            log.logError(JSON.stringify(error));
         });
 }
 

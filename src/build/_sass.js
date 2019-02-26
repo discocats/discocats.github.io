@@ -1,14 +1,8 @@
 const sass = require("node-sass");
 const fs = require("fs");
-require("colors");
 
+const log = require("./logging.js");
 const {styles: {outFilePath, inFilePath}} = require("./_config");
-
-function logErrorIfAny(err) {
-    if (err) {
-        console.log(err.red);
-    }
-}
 
 function compileSassAsync(resolve, reject) {
     sass.render(
@@ -20,25 +14,33 @@ function compileSassAsync(resolve, reject) {
         },
         (error, result) => {
             if (error) {
-                console.log(error.formatted.red);
+                log.logError(error.formatted)
+                
                 reject();
             }
 
             if (!result || !result.css) {
-                console.log("result is empty".red);
+                log.logError("result is empty");
+
                 reject();
             }
 
-            fs.writeFile(outFilePath, result.css, logErrorIfAny);
-            fs.writeFile(outFilePath + ".map", result.map, logErrorIfAny);
+            fs.writeFile(outFilePath, result.css, log.logError);
+            fs.writeFile(outFilePath + ".map", result.map, log.logError);
 
-            console.log("sass has been successfully built.".green);
+            log.logSuccess("sass has been successfully built.");
 
             resolve();
         }
     );
 }
 
+const compileSassAsyncFunc = () => compileSassAsync(
+    () => {},
+    () => {}
+);
+
 module.exports = {
     compileSassAsync: new Promise(compileSassAsync),
+    compileSassAsyncFunc,
 }

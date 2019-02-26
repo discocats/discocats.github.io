@@ -4,6 +4,12 @@ require("colors");
 
 const {styles: {outFilePath, inFilePath}} = require("./_config");
 
+function logErrorIfAny(err) {
+    if (err) {
+        console.log(err.red);
+    }
+}
+
 function compileSassAsync() {
     sass.render(
         {
@@ -23,16 +29,8 @@ function compileSassAsync() {
                 return;
             }
 
-            fs.writeFile(outFilePath, result.css, err => {
-                if (err) {
-                    console.log(err.red);
-                }
-            });
-            fs.writeFile(outFilePath + ".map", result.map, err => {
-                if (err) {
-                    console.log(err.red);
-                }
-            });
+            fs.writeFile(outFilePath, result.css, logErrorIfAny);
+            fs.writeFile(outFilePath + ".map", result.map, logErrorIfAny);
 
             console.log("sass has been successfully built.".green);
         }

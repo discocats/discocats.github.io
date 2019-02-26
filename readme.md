@@ -14,4 +14,4 @@
 
 ## Watch
 
-- Run `npm run watch` in root directory. When `localhost:3004` page should be open automatically.
+- Run `npm run watch` in root directory. Then `localhost:3004` page should be open automatically.

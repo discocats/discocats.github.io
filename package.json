@@ -1,33 +1,31 @@
 {
-    "name": "discocats.github.io",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "sass": "node src/build/scripts/sass.js",
-        "build": "node src/build/scripts/build.js",
-        "watch": "node src/build/scripts/watch.js",
-        "postcss": "node src/build/scripts/post.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/discocats/discocats.github.io.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/discocats/discocats.github.io/issues"
-    },
-    "homepage": "https://github.com/discocats/discocats.github.io#readme",
-    "devDependencies": {
-        "autoprefixer": "^9.4.9",
-        "browser-sync": "^2.26.3",
-        "colors": "^1.3.3",
-        "cssnano": "^4.1.10",
-        "fs": "0.0.1-security",
-        "node-sass": "^4.11.0",
-        "postcss": "^7.0.14"
-    }
+  "name": "discocats.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node src/build/scripts/sass.js",
+    "build": "node src/build/scripts/build.js",
+    "watch": "node src/build/scripts/watch.js",
+    "postcss": "node src/build/scripts/post.js",
+    "lint": "node src/build/scripts/lint.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/discocats/discocats.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/discocats/discocats.github.io/issues"
+  },
+  "homepage": "https://github.com/discocats/discocats.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "colors": "^1.3.3",
+    "fs": "0.0.1-security",
+    "node-sass": "^4.11.0"
+  }
 }

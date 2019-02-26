@@ -10,7 +10,7 @@ function logErrorIfAny(err) {
     }
 }
 
-function compileSassAsync() {
+function compileSassAsync(resolve, reject) {
     sass.render(
         {
             file: inFilePath,
@@ -21,22 +21,24 @@ function compileSassAsync() {
         (err, result) => {
             if (err) {
                 console.log(err.red);
-                return;
+                reject();
             }
 
             if (!result || !result.css) {
                 console.log("result is empty".red);
-                return;
+                reject();
             }
 
             fs.writeFile(outFilePath, result.css, logErrorIfAny);
             fs.writeFile(outFilePath + ".map", result.map, logErrorIfAny);
 
             console.log("sass has been successfully built.".green);
+
+            resolve();
         }
     );
 }
 
 module.exports = {
-    compileSassAsync,
+    compileSassAsync: new Promise(compileSassAsync),
 }

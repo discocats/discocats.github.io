@@ -12,9 +12,9 @@ function compileSassAsync() {
             sourceMapEmbed: true,
             outFile: outFilePath
         },
-        (err, result) => {
-            if (err) {
-                console.log(err.red);
+        (error, result) => {
+            if (error) {
+                console.log(error.formatted.red);
                 return;
             }
 

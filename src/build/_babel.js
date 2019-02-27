@@ -1,6 +1,7 @@
 const babel = require("@babel/core");
 const fs = require("fs");
 
+const log = require("./logging.js");
 const {scripts: {outFilePath, inFilePath}} = require("./_config");
 
 function runBabel() {
@@ -17,12 +18,14 @@ function runBabel() {
         },
         (err, result) => {
             if (err) {
-                console.log(err);
+                log.logError(err);
                 return;
             }
 
-            fs.writeFile(outFilePath, result.code);
-            fs.writeFile(outFilePath + ".map", JSON.stringify(result.map));
+            fs.writeFile(outFilePath, result.code, log.logError);
+            fs.writeFile(outFilePath + ".map", JSON.stringify(result.map), log.logError);
+
+            log.logSuccess("babel built successfully");
         }
     );
 }

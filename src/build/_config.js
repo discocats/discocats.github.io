@@ -6,6 +6,10 @@ const config = {
     },
     html: {
         outFilePath: "./index.html",
+    },
+    scripts: {
+        outFilePath: "./dist/js/index.js",
+        inFilePath: "./src/scripts/index.js",
     }
 };
 

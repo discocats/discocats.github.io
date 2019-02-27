@@ -18,7 +18,7 @@ function runBabel() {
         },
         (err, result) => {
             if (err) {
-                log.logError(err);
+                log.logError(JSON.stringify(err));
                 return;
             }
 

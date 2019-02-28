@@ -9,7 +9,8 @@
     "build": "node src/build/scripts/build.js",
     "watch": "node src/build/scripts/watch.js",
     "postcss": "node src/build/scripts/post.js",
-    "lint": "node src/build/scripts/lint.js"
+    "lint": "node src/build/scripts/lint.js",
+    "babel": "node src/build/scripts/babel.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   },
   "homepage": "https://github.com/discocats/discocats.github.io#readme",
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "autoprefixer": "^9.4.9",
     "browser-sync": "^2.26.3",
     "colors": "^1.3.3",

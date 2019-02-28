@@ -8,6 +8,12 @@
 
 # Build
 
+## Build JS
+
+- Run `npm run babel` in root directory
+
+## Build CSS
+
 - Run `npm run build` in root directory
 
 # Development

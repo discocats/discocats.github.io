@@ -29,3 +29,13 @@ function updateCatalog(sweets) {
 fetch('https://whispering-sea-97013.herokuapp.com/products').then(response => response.json()).then(sweets => updateCatalog(sweets)).catch(error => {
   alert(error);
 });
+var formLogin = new FormData(document.getElementById('loginForm'));
+fetch("https://whispering-sea-97013.herokuapp.com/login", {
+  method: "POST",
+  body: formLogin
+});
+var formSignup = new FormData(document.getElementById('signupForm'));
+fetch("https://whispering-sea-97013.herokuapp.com/signup", {
+  method: "POST",
+  body: formSignup
+});

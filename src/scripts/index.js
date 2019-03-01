@@ -35,12 +35,12 @@ fetch('https://whispering-sea-97013.herokuapp.com/products')
     alert(error);
   });
 
-  var formLogin = new FormData(document.getElementById('loginForm'));
+  const formLogin = new FormData(document.getElementById('loginForm'));
 fetch("https://whispering-sea-97013.herokuapp.com/login", {
   method: "POST",
   body: formLogin
 });
-  var formSignup = new FormData(document.getElementById('signupForm'));
+  const formSignup = new FormData(document.getElementById('signupForm'));
 fetch("https://whispering-sea-97013.herokuapp.com/signup", {
   method: "POST",
   body: formSignup

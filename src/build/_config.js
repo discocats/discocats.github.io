@@ -9,7 +9,9 @@ const config = {
     },
     scripts: {
         outFilePath: "./dist/js/index.js",
-        inFilePath: "./src/scripts/index.js",
+        outFileName: "index.js",
+        outDirPath: "./dist/js",
+        inFilePath: "./src/scripts/index.tsx",
     }
 };
 

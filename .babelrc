@@ -3,10 +3,10 @@
         [
             "@babel/preset-env",
             {
-                "useBuiltIns": "usage",
-                "modules": false
+                "useBuiltIns": "usage"
             }
         ],
         "@babel/preset-react"
     ],
+    "plugins": [["@babel/plugin-transform-modules-commonjs", { "noInterop": true }]]
 }

@@ -27,7 +27,6 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "@babel/preset-react": "^7.0.0",
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.2",
     "autoprefixer": "^9.4.9",
@@ -49,6 +48,8 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
   }

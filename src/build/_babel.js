@@ -7,15 +7,7 @@ const {scripts: {outFilePath, inFilePath}} = require("./_config");
 function runBabel() {
     babel.transformFile(
         inFilePath,
-        {
-            sourceMaps: true,
-            presets: [
-                [
-                    "@babel/preset-env"
-                ]
-            ],
-
-        },
+        undefined,
         (err, result) => {
             if (err) {
                 log.logError(JSON.stringify(err));

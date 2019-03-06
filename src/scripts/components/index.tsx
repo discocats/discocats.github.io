@@ -1,9 +1,9 @@
 import * as React from "react";
 
-export interface AppProps {}
+export interface IAppProps {}
 
-export default class App extends React.Component<AppProps, undefined> {
-    render() {
+export default class App extends React.Component<IAppProps, {}> {
+    public render() {
         return (
             <div className="app">
                 <h1>Hello World!</h1>

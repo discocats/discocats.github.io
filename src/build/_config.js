@@ -12,6 +12,7 @@ const config = {
         outFileName: "index.js",
         outDirPath: "./dist/js",
         inFilePath: "./src/scripts/index.tsx",
+        inDirPath: "./src/scripts",
     }
 };
 

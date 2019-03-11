@@ -1,27 +1,38 @@
-# Requirements
+# Deprecated projects
 
-- NodeJs >= 8.11.3
+- [Finnish site](https://discocats.github.io/Deprecated/Finnish/index.html)
+- [Amazon](https://discocats.github.io/Deprecated/Amazon/index.html)
+
+# Environment requirements
+
+- `NodeJs` >= `8.11.3`
+- The latest version of `npm`
+- The latest version of `Google Chrome`
 
 # Installation
 
-- Run `npm install` in root directory
+- Execute `npm install` in root directory
+- Execute `npm run build` in root directory
+- Open `index.html` from root directory using `Google Chrome`
 
 # Build
 
+You can build app overall or styles or scripts in particular.
+
 ## Build JS
 
-- Run `npm run babel` in root directory
+- Execute `npm run build-scripts` in root directory
 
 ## Build CSS
 
-- Run `npm run build` in root directory
+- Execute `npm run build-styles` in root directory
 
-# Development
+# Watch
+Watch works a bit strange. You need to open 2 terminals at the same time. Then `localhost:3004` page should be open automatically.
 
-## Watch
+1. Execute `npm run watch-scripts` in root directory in the first terminal.
+2. Execute `npm run watch-styles` in root directory in the second terminal.
 
-- Run `npm run watch` in root directory. Then `localhost:3004` page should be open automatically.
+# Lint styles and scripts
 
-## Lint styles
-
-- Run `npm run lint` in root directory. Results should be visible in console.
+- Execute `npm run lint` in root directory. Results should be visible in console.

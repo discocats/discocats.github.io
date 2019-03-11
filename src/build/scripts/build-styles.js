@@ -1,4 +1,3 @@
-const { performPostcssStep } = require("../_post.js");
-const { compileSassAsync } = require("../_sass");
+const { buildStyles } = require("../_build-styles.js");
 
-compileSassAsync.then(performPostcssStep);
+buildStyles();

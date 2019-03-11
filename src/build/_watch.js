@@ -6,7 +6,8 @@ const log = require("./logging.js");
 const { buildStyles } = require("./_build-styles.js");
 const {
     styles: { outFilePath: stylesOutPath, allSrcFiles: allStylesSrcFiles },
-    html: { outFilePath: htmlOutPath }
+    html: { outFilePath: htmlOutPath },
+    scripts: { outFilePath: scriptsOutPath }
 } = require("./_config");
 
 // reload 'localhost:3005' when dist css or html changes
@@ -22,8 +23,9 @@ function startProxy() {
             proxy: "localhost:3005",
             port: 3004,
             injectChanges: true,
-            files: [stylesOutPath, htmlOutPath]
-        }, log.logSuccess("Proxy server initiated.")
+            files: [stylesOutPath, htmlOutPath, scriptsOutPath]
+        },
+        log.logSuccess("Proxy server initiated.")
     );
 }
 

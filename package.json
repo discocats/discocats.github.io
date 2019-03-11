@@ -9,9 +9,7 @@
     "build": "node src/build/scripts/build.js",
     "watch": "node src/build/scripts/watch.js",
     "postcss": "node src/build/scripts/post.js",
-    "lint": "npm run style-lint && npm run tslint",
-    "style-lint": "node src/build/scripts/style-lint.js",
-    "tslint": "node src/build/scripts/tslint.js",
+    "lint": "node src/build/scripts/lint.js",
     "babel": "node src/build/scripts/babel.js",
     "webpack": "webpack"
   },

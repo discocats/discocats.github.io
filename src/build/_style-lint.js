@@ -15,10 +15,10 @@ function lintStyles() {
         })
         .then(function(data) {
             if (data.output) {
-                log.logInfo("linter found several issues");
+                log.logInfo("style-lint found several issues");
                 log.logInfo(data.output);
             } else {
-                log.logSuccess("linter found no issues");
+                log.logSuccess("style-lint found no issues");
             }
         })
         .catch(function(err) {

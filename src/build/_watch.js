@@ -3,7 +3,7 @@ const bsProxy = require("browser-sync").create("My proxy server");
 
 const log = require("./logging.js");
 
-const { compileSassAsyncFunc } = require("./_sass");
+const { buildStyles } = require("./_build-styles.js");
 const {
     styles: { outFilePath: stylesOutPath, allSrcFiles: allStylesSrcFiles },
     html: { outFilePath: htmlOutPath }
@@ -29,7 +29,7 @@ function startProxy() {
 
 function runServerAndProxy() {
     // run compileSassAsync when sass changes
-    bsProxy.watch([allStylesSrcFiles]).on("change", compileSassAsyncFunc);
+    bsProxy.watch([allStylesSrcFiles]).on("change", buildStyles);
 
     bsServer.init(
         {

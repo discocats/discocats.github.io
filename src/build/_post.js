@@ -27,9 +27,9 @@ const configuredCssNano = cssnano({
     safe: true
 });
 
-const compiledSass = fs.readFileSync(outFilePath, "utf8");
-
 function performPostcssStep() {
+    const compiledSass = fs.readFileSync(outFilePath, "utf8");
+
     postcss([autoprefixer, configuredCssNano])
         .process(compiledSass, { from: outFilePath, to: outFilePath })
         .then(result => {

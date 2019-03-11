@@ -61,9 +61,6 @@ function compileSassAsync(resolve, reject) {
     );
 }
 
-const compileSassAsyncFunc = () => compileSassAsync(() => {}, () => {});
-
 module.exports = {
-    compileSassAsync: new Promise(compileSassAsync),
-    compileSassAsyncFunc
+    compileSassAsync: () => new Promise(compileSassAsync)
 };

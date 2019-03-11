@@ -5,15 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node src/build/scripts/sass.js",
-    "build": "node src/build/scripts/build.js",
-    "watch": "node src/build/scripts/watch.js",
-    "postcss": "node src/build/scripts/post.js",
-    "lint": "npm run style-lint && npm run tslint",
-    "style-lint": "node src/build/scripts/style-lint.js",
-    "tslint": "node src/build/scripts/tslint.js",
-    "babel": "node src/build/scripts/babel.js",
-    "webpack": "webpack"
+    "build": "npm run build-scripts && npm run build-styles",
+    "build-scripts": "webpack",
+    "build-styles": "node src/build/scripts/build-styles.js",
+    "watch-scripts": "webpack --watch",
+    "watch-styles": "node src/build/scripts/watch.js",
+    "lint": "node src/build/scripts/lint.js"
   },
   "repository": {
     "type": "git",

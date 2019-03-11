@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node src/build/scripts/sass.js",
-    "build": "node src/build/scripts/build.js",
+    "build-styles": "node src/build/scripts/build-styles.js",
     "watch": "node src/build/scripts/watch.js",
-    "postcss": "node src/build/scripts/post.js",
     "lint": "node src/build/scripts/lint.js",
     "babel": "node src/build/scripts/babel.js",
     "webpack": "webpack"

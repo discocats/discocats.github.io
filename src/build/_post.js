@@ -35,10 +35,10 @@ function performPostcssStep() {
         .then(result => {
             fs.writeFile(outFilePath, result.css, log.logError);
 
-            log.logSuccess("postcss finished");
+            log.logSuccess("postcss step has been successfully finished.");
         })
         .catch(error => {
-            log.logError("an error ocurred");
+            log.logError("an error ocurred during postcss step.");
             log.logError(JSON.stringify(error));
         });
 }

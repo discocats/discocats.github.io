@@ -11,7 +11,7 @@
     "watch-scripts": "webpack --watch",
     "watch-styles": "node src/build/scripts/watch.js",
     "lint": "node src/build/scripts/lint.js",
-    "zz" : "tsc -p src/build/tsconfig.json"
+    "zz": "tsc -p src/build/tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,8 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "@types/fs-extra": "^5.0.5",
+    "@types/glob": "^7.1.1",
     "@types/node": "^11.11.1",
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.2",

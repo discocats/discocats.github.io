@@ -1,6 +1,6 @@
-import fs from "fs-extra";
-import glob from "glob";
-import tslint from "tslint";
+import * as fs from "fs-extra";
+import * as glob from "glob";
+import * as tslint from "tslint";
 
 import { config } from "./_config";
 const {

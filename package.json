@@ -10,8 +10,8 @@
     "build-styles": "node src/build/scripts/build-styles.js",
     "watch-scripts": "webpack --watch",
     "watch-styles": "node src/build/scripts/watch.js",
-    "lint": "node src/build/scripts/lint.js",
-    "zz": "tsc -p src/build/tsconfig.json"
+    "compile-build-scripts": "tsc -p src/build/tsconfig.json",
+    "lint": "npm run compile-build-scripts && node src/build/dist/scripts/lint.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +35,7 @@
     "@types/node": "^11.11.1",
     "@types/react": "^16.8.6",
     "@types/react-dom": "^16.8.2",
+    "@types/stylelint": "^9.4.2",
     "autoprefixer": "^9.4.9",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.5",

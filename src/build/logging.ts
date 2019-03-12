@@ -1,4 +1,5 @@
-import Colors = require("colors");
+// tslint:disable-next-line:no-var-requires
+require("colors");
 
 export function logSuccess(message: any) {
     if (message) {

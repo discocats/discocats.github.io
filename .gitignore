@@ -407,4 +407,4 @@ healthchecksdb
 MigrationBackup/
 
 # custom, built path for ts server-side files
-built/
+src/build/dist

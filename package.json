@@ -10,7 +10,8 @@
     "build-styles": "node src/build/scripts/build-styles.js",
     "watch-scripts": "webpack --watch",
     "watch-styles": "node src/build/scripts/watch.js",
-    "lint": "node src/build/scripts/lint.js"
+    "lint": "node src/build/scripts/lint.js",
+    "zz" : "tsc -p src/build/tsconfig.json"
   },
   "repository": {
     "type": "git",

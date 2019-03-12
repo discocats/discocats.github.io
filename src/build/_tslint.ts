@@ -8,7 +8,7 @@ const {
 } = config;
 import * as log from "./logging";
 
-function lintTypescript() {
+export function lintTypescript() {
     const options: tslint.ILinterOptions = {
         fix: false,
         formatter: "stylish",
@@ -46,5 +46,3 @@ function lintTypescript() {
         log.logSuccess("Typescript linter check found no errors!");
     }
 }
-
-module.exports = { lintTypescript };

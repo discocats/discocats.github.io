@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-scripts && npm run build-styles",
-    "build-scripts": "webpack",
+    "build-scripts": "npm run compile-build-scripts && webpack",
     "build-styles": "npm run compile-build-scripts && node src/build/dist/scripts/build-styles.js",
     "watch-scripts": "webpack --watch",
-    "watch-styles": "node src/build/scripts/watch.js",
+    "watch-styles": "npm run compile-build-scripts && node src/build/dist/scripts/watch.js",
     "compile-build-scripts": "tsc -p src/build/tsconfig.json",
     "lint": "npm run compile-build-scripts && node src/build/dist/scripts/lint.js"
   },
@@ -31,6 +31,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@types/autoprefixer": "^9.4.0",
+    "@types/browser-sync": "0.0.43",
     "@types/fs-extra": "^5.0.5",
     "@types/glob": "^7.1.1",
     "@types/node": "^11.11.1",

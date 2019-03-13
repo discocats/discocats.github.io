@@ -3,7 +3,7 @@ const { CheckerPlugin } = require("awesome-typescript-loader");
 
 const {
     scripts: { outFileName, outDirPath, inFilePath }
-} = require("./src/build/_config");
+} = require("./src/build/dist/_config");
 
 module.exports = {
     entry: inFilePath,

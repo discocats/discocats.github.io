@@ -1,18 +1,19 @@
-const tslint = require("tslint");
-const glob = require("glob");
-const fs = require("fs-extra");
+import * as fs from "fs-extra";
+import * as glob from "glob";
+import * as tslint from "tslint";
 
-const log = require("./logging.js");
+import { config } from "./_config";
 const {
-    scripts: { inDirPath }
-} = require("./_config");
+    scripts: { inDirPath },
+} = config;
+import * as log from "./logging";
 
-function lintTypescript() {
-    const options = {
+export function lintTypescript() {
+    const options: tslint.ILinterOptions = {
         fix: false,
         formatter: "stylish",
         formattersDirectory: null,
-        rulesDirectory: null
+        rulesDirectory: null,
     };
 
     const linter = new tslint.Linter(options);
@@ -20,7 +21,7 @@ function lintTypescript() {
     const filePaths = glob.sync(inDirPath + "/**/*.ts?(x)");
 
     const filesWithErrors = [];
-    filePaths.forEach(path => {
+    filePaths.forEach((path) => {
         const fileContents = fs.readFileSync(path, "utf8");
 
         const configuration = tslint.Configuration.findConfiguration("./tslint.json", path).results;
@@ -30,21 +31,18 @@ function lintTypescript() {
 
         if (result.errorCount > 0) {
             filesWithErrors.push({
+                errorsCount: result.errorCount,
                 path,
-                errorsCount: result.errorCount
             });
 
             log.logError(result.output);
         }
 
-        linter.failures = [];
-        linter.fixes = [];
+        (linter as any).failures = [];
+        (linter as any).fixes = [];
     });
 
-    
     if (filesWithErrors.length === 0) {
         log.logSuccess("Typescript linter check found no errors!");
     }
 }
-
-module.exports = { lintTypescript };

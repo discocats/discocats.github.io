@@ -1,10 +1,11 @@
-const sass = require("node-sass");
-const fs = require("fs");
+import * as fs from "fs";
+import * as sass from "node-sass";
 
-const log = require("./logging.js");
+import { config } from "./_config";
+import * as log from "./logging";
 const {
-    styles: { outFilePath, inFilePath }
-} = require("./_config");
+    styles: { outFilePath, inFilePath },
+} = config;
 
 const outFileMapPath = outFilePath + ".map";
 
@@ -23,20 +24,20 @@ function createFiles() {
     fs.closeSync(fs.openSync(outFileMapPath, "w"));
 }
 
-function compileSassAsync(resolve, reject) {
+function compileSassAsyncFunc(resolve: () => any, reject: () => any) {
     deleteFilesIfExist();
     createFiles();
 
     sass.render(
         {
             file: inFilePath,
+            outFile: outFilePath,
             sourceMap: true,
             sourceMapEmbed: true,
-            outFile: outFilePath
         },
         (error, result) => {
             if (error) {
-                log.logError(error.formatted);
+                log.logError((error as any).formatted);
                 reject();
             }
 
@@ -57,10 +58,8 @@ function compileSassAsync(resolve, reject) {
 
             log.logSuccess("sass has been successfully built.");
             resolve();
-        }
+        },
     );
 }
 
-module.exports = {
-    compileSassAsync: () => new Promise(compileSassAsync)
-};
+export const compileSassAsync = () => new Promise(compileSassAsyncFunc);

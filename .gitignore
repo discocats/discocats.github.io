@@ -405,3 +405,6 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+
+# custom, built path for ts server-side files
+src/build/dist

@@ -4,7 +4,7 @@ import * as tslint from "tslint";
 
 import { config } from "./_config";
 const {
-    scripts: { inDirPath },
+    scripts: { inDirPath, buildDirPath },
 } = config;
 import * as log from "./logging";
 
@@ -18,7 +18,7 @@ export function lintTypescript() {
 
     const linter = new tslint.Linter(options);
 
-    const filePaths = glob.sync(inDirPath + "/**/*.ts?(x)");
+    const filePaths = glob.sync(inDirPath + "/**/*.ts?(x)").concat(glob.sync(buildDirPath + "/**/*.ts?(x)"));
 
     const filesWithErrors = [];
     filePaths.forEach((path) => {

@@ -3,6 +3,7 @@ export const config = {
         outFilePath: "./index.html",
     },
     scripts: {
+        buildDirPath: "./src/build",
         inDirPath: "./src/scripts",
         inFilePath: "./src/scripts/index.tsx",
         outDirPath: "./dist/js",
